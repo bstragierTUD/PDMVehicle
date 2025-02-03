@@ -1,0 +1,25 @@
+import numpy as np  
+from matplotlib import pyplot as plt
+from matplotlib.patches import Rectangle 
+
+env_bounds = 15 # x, y bounds in m
+vehicle_dims = (2,4.9) #BMW 330i (Width, length in m)
+
+
+
+
+
+
+
+
+
+fig,ax = plt.subplots()
+ax.set_xlim(-env_bounds,env_bounds)
+ax.set_ylim(-env_bounds,env_bounds)
+
+
+
+ax.add_patch(Rectangle((0,0),2,1, color = "k"))
+ax.add_patch(Rectangle((-2,-2),vehicle_dims[0],vehicle_dims[1], color = "r"))
+
+plt.show()
